@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asror\\OneDrive\\Desktop\\MVC Project\\SMS\\SMS.csproj",
+      "projectUniqueName": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\SMS.csproj",
       "projectName": "SMS",
-      "projectPath": "C:\\Users\\Asror\\OneDrive\\Desktop\\MVC Project\\SMS\\SMS.csproj",
+      "projectPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\SMS.csproj",
       "packagesPath": "C:\\Users\\Asror\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asror\\OneDrive\\Desktop\\MVC Project\\SMS\\obj\\",
+      "outputPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asror\\AppData\\Roaming\\NuGet\\NuGet.Config",
