@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\wwwroot\\lib\\CustomCSS\\Registration.css",
+      "PackagePath": "staticwebassets\\lib\\CustomCSS\\Registration.css"
+    },
+    {
       "Id": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

@@ -1,0 +1,17 @@
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\bin\Debug\net7.0\SMS.DAL.deps.json
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\bin\Debug\net7.0\SMS.DAL.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\bin\Debug\net7.0\SMS.DAL.pdb
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\bin\Debug\net7.0\SMSCore.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\bin\Debug\net7.0\SMSCore.pdb
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.csproj.AssemblyReference.cache
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.AssemblyInfoInputs.cache
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.AssemblyInfo.cs
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.csproj.CopyComplete
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\refint\SMS.DAL.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.pdb
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\ref\SMS.DAL.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\bin\Debug\net7.0\SMS.DAL.runtimeconfig.json
+C:\Users\Asror\source\repos\Asror020\SMS\SMS.DAL\obj\Debug\net7.0\SMS.DAL.genruntimeconfig.cache
