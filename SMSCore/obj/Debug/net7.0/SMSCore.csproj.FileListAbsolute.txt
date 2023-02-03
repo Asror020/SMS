@@ -1,0 +1,14 @@
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\bin\Debug\net7.0\SMSCore.deps.json
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\bin\Debug\net7.0\SMSCore.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\bin\Debug\net7.0\SMSCore.pdb
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.csproj.AssemblyReference.cache
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.AssemblyInfoInputs.cache
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.AssemblyInfo.cs
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.csproj.CoreCompileInputs.cache
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\refint\SMSCore.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.pdb
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\ref\SMSCore.dll
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\bin\Debug\net7.0\SMSCore.runtimeconfig.json
+C:\Users\Asror\source\repos\Asror020\SMS\SMSCore\obj\Debug\net7.0\SMSCore.genruntimeconfig.cache

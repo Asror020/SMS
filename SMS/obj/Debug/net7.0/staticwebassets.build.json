@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UInIg7BfT5X9JdBrgQGI5UVT2tWO2RQ4O/kcLSBuGCc=",
+  "Hash": "VV9oMqnzKUt62VAPNe/sAnfD4XIY9noOFJ0RO+WTzis=",
   "Source": "SMS",
   "BasePath": "_content/SMS",
   "Mode": "Default",
@@ -865,6 +865,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+    },
+    {
+      "Identity": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\wwwroot\\lib\\CustomCSS\\Registration.css",
+      "SourceId": "SMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\wwwroot\\",
+      "BasePath": "_content/SMS",
+      "RelativePath": "lib/CustomCSS/Registration.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\CustomCSS\\Registration.css"
     },
     {
       "Identity": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\wwwroot\\lib\\jquery\\dist\\jquery.js",
