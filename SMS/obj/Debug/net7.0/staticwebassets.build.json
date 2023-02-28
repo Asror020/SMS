@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VV9oMqnzKUt62VAPNe/sAnfD4XIY9noOFJ0RO+WTzis=",
+  "Hash": "qd6yofg8t6p2xSP4Lh7ogTB7f952jpGwuw972o3C1hk=",
   "Source": "SMS",
   "BasePath": "_content/SMS",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Asror\\.nuget\\packages\\mudblazor\\6.1.8\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Asror\\.nuget\\packages\\mudblazor\\6.1.8\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Asror\\.nuget\\packages\\mudblazor\\6.1.8\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Asror\\.nuget\\packages\\mudblazor\\6.1.8\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Asror\\.nuget\\packages\\mudblazor\\6.1.8\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Asror\\.nuget\\packages\\mudblazor\\6.1.8\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SMS.styles.css",
       "SourceId": "SMS",

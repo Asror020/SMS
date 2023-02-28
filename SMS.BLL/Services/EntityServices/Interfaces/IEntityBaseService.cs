@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="id">entity id being queried</param>
         /// <returns>Entity</returns>
-        Task<TEntity> GetByIdAsync(long id);
+        Task<TEntity?> GetByIdAsync(long id);
 
         /// <summary>
         /// Created entity

@@ -16,5 +16,6 @@ namespace SMS.BLL.Models.AuthenticationModels
         [Alphabet(ErrorMessage = "Please, enter valid password")]
         [Digit(ErrorMessage = "Please, enter valid password")]
         public string Password { get; set; } = null!;
+
     }
 }

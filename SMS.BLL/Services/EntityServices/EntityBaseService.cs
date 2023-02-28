@@ -13,14 +13,14 @@ namespace SMS.BLL.Services.EntityServices
             EntityRepository = entityRepository;
         }
 
-        public virtual Task<TEntity> CreateAsync(TEntity entity)
+        public async virtual Task<TEntity> CreateAsync(TEntity entity)
         {
             if (entity == null)
             {
                 throw new Exception();
             }
 
-            return Task.Run(async () =>
+            return await Task.Run(async () =>
             {
                 EntityRepository.Create(entity);
 
@@ -28,14 +28,14 @@ namespace SMS.BLL.Services.EntityServices
             });
         }
 
-        public virtual Task<bool> DeleteAsync(long id)
+        public async virtual Task<bool> DeleteAsync(long id)
         {
             if (id <= 0)
             {
                 throw new ArgumentException();
             }
 
-            return Task.Run(async () =>
+            return await Task.Run(async () =>
             {
                 var data = EntityRepository.Get(x => x.Id == id).FirstOrDefault() ?? throw new EntryPointNotFoundException(nameof(TEntity));
 
@@ -45,11 +45,11 @@ namespace SMS.BLL.Services.EntityServices
             });
         }
 
-        public virtual Task<TEntity> GetByIdAsync(long id)
+        public async virtual Task<TEntity?> GetByIdAsync(long id)
         {
             if (id <= 0) throw new EntryPointNotFoundException();
 
-            return Task.Run(() =>
+            return await Task.Run(() =>
             {
                 var data = EntityRepository.Get(x => x.Id == id).FirstOrDefault();
 
@@ -57,11 +57,11 @@ namespace SMS.BLL.Services.EntityServices
             });
         }
 
-        public virtual Task<bool> UpdateAsync(long id, TEntity entity)
+        public async virtual Task<bool> UpdateAsync(long id, TEntity entity)
         {
             if (id <= 0 || entity == null) throw new EntryPointNotFoundException();
 
-            return Task.Run(async () =>
+            return await Task.Run(async () =>
             {
                 var data = EntityRepository.Get(x => x.Id == id).FirstOrDefault() ?? throw new EntryPointNotFoundException();
 

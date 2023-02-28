@@ -15,6 +15,7 @@ namespace SMS.SeedData
                 throw new InvalidOperationException();
 
             SeedEmailTemplates(dbContext, hostEnvironment);
+            SeedSelectionItems(dbContext, hostEnvironment);
         }
 
         private static void SeedEmailTemplates(ApplicationDbContext dbContext, IWebHostEnvironment hostEnvironment)
@@ -32,6 +33,20 @@ namespace SMS.SeedData
                 Subject = x.Subject,
                 Body = JsonConvert.DeserializeObject<string>(x.Body)!,
             }));
+
+            dbContext.SaveChanges();
+        }
+
+        private static void SeedSelectionItems(ApplicationDbContext dbContext, IWebHostEnvironment hostEnvironment)
+        {
+            if (dbContext.SelectionItems.Any())
+                return;
+
+            var data = JsonConvert
+                .DeserializeObject<IEnumerable<SelectionItem>>
+                (File.ReadAllText(Path.Combine(hostEnvironment.ContentRootPath, "SeedData", "Data", "SelectionItems.json")))!;
+
+            dbContext.SelectionItems.AddRange(data);
 
             dbContext.SaveChanges();
         }

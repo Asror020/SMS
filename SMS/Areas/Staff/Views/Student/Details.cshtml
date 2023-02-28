@@ -1,0 +1,107 @@
+﻿@using SMS.BLL.Models.ViewModels;
+@model StudentDto
+
+<html>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    h1, p {
+        text-align: center;
+    }
+
+    input {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+    }
+
+    select {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+    }
+</style>
+<body>
+    <div class="Container">
+
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StudentId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.StudentId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.User.FirstName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.User.FirstName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.User.LastName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.User.LastName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.User.EmailAddress)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.User.EmailAddress)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.User.Password)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.User.Password)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.GroupName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.GroupName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Degree)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Degree)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CourseLevel)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CourseLevel)
+            </dd>
+
+        </dl>   
+
+        <br />
+        <a class="btn btn-primary" asp-area="Staff" asp-controller="Student" asp-action="Update" asp-route-id="@Model.Id">Update</a>
+        @Html.ActionLink("Delete", "Delete", 
+        new {id = Model.Id},
+        new { onclick = "return confirm('Are you sure to delete this student?')", @class = "btn btn-danger"})
+        <a class="" asp-area="Staff" asp-controller="Admin" asp-action="Students">Back to list</a>
+        <hr />
+    </div>
+</body>
+</html>

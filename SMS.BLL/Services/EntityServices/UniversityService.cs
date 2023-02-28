@@ -1,4 +1,5 @@
-﻿using SMS.BLL.Services.EntityServices.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using SMS.BLL.Services.EntityServices.Interfaces;
 using SMS.DAL.Repositories.interfaces;
 using SMSCore.Models.Entities;
 using System;
@@ -30,6 +31,15 @@ namespace SMS.BLL.Services.EntityServices
             await _userService.UpdateAsync(user.Id, user);
 
             return createdUniversity;
+        }
+
+        public async Task<bool> DeleteByOwnerId(long id)
+        {
+            var university = EntityRepository.Get(x => x.UniversityAdminUserId == id).FirstOrDefault();
+
+            if (university == null) return true;
+
+            return await base.DeleteAsync(university.Id);
         }
 
         private bool UniversityExists(string name)

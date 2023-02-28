@@ -1,0 +1,52 @@
+﻿@using SMSCore.Models.Entities
+@model IEnumerable<Student>
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text-primary">Students list</h2>
+            </div>
+            <div class="col-6 text-end">
+                <a class="btn btn-primary" asp-area="Staff" asp-controller="Student" asp-action="Add">
+                    <i class="bi bi-plus-circle"></i> Add
+                    </a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Student Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Course Level</th>
+                    <th scope="col">Degree</th>
+                    <th scope="col">Group Name</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            @foreach (var student in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@student.StudentId</td>
+                        <td>@student.User.FirstName @student.User.LastName</td>
+                        <td>@student.User.EmailAddress</td>
+                        <td>@student.DateOfBirth</td>
+                        <td>@student.CourseLevel</td>
+                        <td>@student.Degree</td>
+                        <td>@student.GroupName</td>
+                        <td>
+                            <a class="btn btn-outline-primary" asp-area="Staff" asp-controller="Student" asp-action="Details" asp-route-id="@student.Id">
+                                <i class="bi bi-pencil"></i> &nbsp Details
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>

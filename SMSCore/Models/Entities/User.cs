@@ -44,5 +44,7 @@ namespace SMSCore.Models.Entities
         /// User university
         /// </summary>
         public University? University { get; set; }
+
+        public bool IsUserConfirmed { get; set; } 
     }
 }

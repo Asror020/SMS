@@ -1,0 +1,39 @@
+﻿@using SMSCore.Models.Entities;
+@model IEnumerable<User>
+<div class="wrapper">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">University Name</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Number of Students</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            @foreach (var user in Model)
+            {
+                <tbody>
+                    <tr>
+                        <th scope="row">@user.FirstName @user.LastName</th>
+                        <td>@user.EmailAddress</td>
+                        <td>@user.University?.Name</td>
+                        <td>@user.University?.Location</td>
+                        <td>@user.University?.NumberOfStudents</td>
+                        <td><a class="btn btn-primary" asp-area="Administration" asp-controller="Admin" asp-action="Approve" asp-route-id="@user.Id">
+                                <i class="bi bi-check-circle-fill"></i> Approve</a>
+                            
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" asp-area="Administration" asp-controller="Admin" asp-action="Delete" asp-route-id="@user.Id">
+                                <i class="bi bi-trash"></i>Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>

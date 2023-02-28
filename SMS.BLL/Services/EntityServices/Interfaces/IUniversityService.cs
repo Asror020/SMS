@@ -9,5 +9,6 @@ namespace SMS.BLL.Services.EntityServices.Interfaces
 {
     public interface IUniversityService : IEntityBaseService<University>
     {
+        Task<bool> DeleteByOwnerId(long id);
     }
 }
