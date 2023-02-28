@@ -13,10 +13,14 @@ namespace SMS.BLL.Models.ViewModels
         public long Id { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
+        [MaxLength(64, ErrorMessage = "Length should be smaller than 65")]
+        [MinLength(3, ErrorMessage = "Name is required")]
         [AlphabetOnly(ErrorMessage = "Please, enter only letters")]
         public string? Name { get; set; }
 
-        [Required(ErrorMessage = "Number of students is required")]
+        [Required(ErrorMessage = "This field is required")]
+        [Range(100, 100000)]
+        [Display(Name = "Number of students")]
         public int NumberOfStudents { get; set; }
 
         public int NumberOfStaff { get; set; }

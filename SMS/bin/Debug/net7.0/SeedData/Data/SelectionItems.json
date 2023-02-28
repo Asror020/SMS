@@ -1,0 +1,46 @@
+[
+  {
+    "Type": "CourseLevel",
+    "Value": "Freshman"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Sophomore"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Junior"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Senior"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Master's 1"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Master's 2"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Doctoral 1"
+  },
+  {
+    "Type": "CourseLevel",
+    "Value": "Doctoral 2"
+  },
+  {
+    "Type": "Degree",
+    "Value": "Bachelor"
+  },
+  {
+    "Type": "Degree",
+    "Value": "Master"
+  },
+  {
+    "Type": "Degree",
+    "Value": "Doctor"
+  }
+]

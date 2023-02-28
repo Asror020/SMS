@@ -76,6 +76,6 @@ namespace StudentManagementSystem.Controllers
             var data = await _userService.DeleteAsync(id);
 
             return data ? RedirectToAction("Create") : RedirectToAction(nameof(Delete));
-        }
+        }   
     }
 }

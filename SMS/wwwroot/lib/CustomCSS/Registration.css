@@ -1,13 +1,13 @@
-﻿form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.Container {
+﻿.Container {
     display: flex;
     flex-direction: column;
     width: 25vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1, p {

@@ -35,4 +35,11 @@ namespace SMS.BLL.Empressions
         {
         }
     }
+
+    public class AlphabetAndDigitOnly : RegularExpressionAttribute 
+    {
+        public AlphabetAndDigitOnly() : base("^[a-zA-Z0-9]+$")
+        {
+        }
+    }
 }

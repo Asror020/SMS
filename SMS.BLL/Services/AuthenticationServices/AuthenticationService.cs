@@ -25,7 +25,11 @@ namespace SMS.BLL.Services.AuthenticationServices
 
             var user = await _userService.GetByEmailAsync(model.Email);
 
-            if (user == null || user.Password != model.Password || user.IsEmailVerified == false) return new TokenDto();
+            if (user == null ||
+                user.Password != model.Password ||
+                user.IsEmailVerified == false ||
+                user.IsUserConfirmed == false
+                ) return new TokenDto();
 
             var token = await _jwtGeneratorService.CreateToken(user, true);
 

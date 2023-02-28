@@ -6,6 +6,7 @@ using SMS.BLL.Models.AuthenticationModels;
 using SMS.BLL.Models.Configurations;
 using SMS.BLL.Services.AuthenticationServices.Interfaces;
 using SMS.BLL.Services.EntityServices.Interfaces;
+using SMSCore.Constants;
 using SMSCore.Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,8 @@ namespace SMS.BLL.Services.AuthenticationServices
             {
                 AccessToken = accessToken,
                 RefreshToken = refreshToken,
-                Principal = new ClaimsPrincipal(identity)
+                Principal = new ClaimsPrincipal(identity),
+                Role = user.Role
             };
         }
 
@@ -71,7 +73,8 @@ namespace SMS.BLL.Services.AuthenticationServices
             var claims = new List<Claim>()
             {
                 new Claim(ClaimsIdentity.DefaultNameClaimType, user.EmailAddress),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role)
+                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role),
+                new Claim(AuthenticationClaims.UserId, user.Id.ToString())
             };
 
             ClaimsIdentity identity = new ClaimsIdentity(claims, "JwtAuth", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);

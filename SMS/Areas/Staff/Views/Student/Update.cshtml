@@ -1,0 +1,113 @@
+﻿@using SMS.BLL.Models.ViewModels;
+@model StudentDto
+
+<html>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    h1, p {
+        text-align: center;
+    }
+
+    input {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+    }
+
+    select {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+    }
+</style>
+<body>
+
+    <form asp-area="Staff" asp-controller="Student" asp-action="Update" asp-route-id="@Model.Id">
+        <div class="Container">
+            <hr>
+            <div class="row align-items-start">
+
+                <div class="col">
+                    <label asp-for="User.FirstName"><b>First name</b></label><br />
+                    <input type="text" placeholder="Enter first name" asp-for="User.FirstName"><br />
+                    <span asp-validation-for="User.FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="User.LastName"><b>Last name</b></label><br />
+                    <input type="text" placeholder="Enter last name" asp-for="User.LastName"><br />
+                    <span asp-validation-for="User.LastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row align-items-end">
+
+                <div class="col">
+                    <label asp-for="CourseLevel"><b>Grade</b></label><br />
+                    <input type="number" placeholder="Enter student grade" asp-for="CourseLevel"><br />
+                    <span asp-validation-for="CourseLevel" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="Degree"><b>Degree</b></label><br />
+                    <input type="text" placeholder="Enter student degree" asp-for="Degree"><br />
+                    <span asp-validation-for="Degree" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <label asp-for="DateOfBirth"><b>Date of birth</b></label><br />
+                    <input type="date" placeholder="Enter date of birth" asp-for="DateOfBirth"><br />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="StudentId"><b>Student Id</b></label><br />
+                    <input type="text" placeholder="Enter student id" asp-for="StudentId"><br />
+                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                </div>
+
+                <input type="hidden" placeholder="Enter student id" asp-for="User.EmailAddress"><br />
+                <input type="hidden" placeholder="Enter student id" asp-for="User.Password"><br />
+
+            </div>
+
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <label asp-for="GroupName"><b>Group Name</b></label><br />
+                    <select asp-for="GroupName">
+                        <option value="@null">No group</option>
+                        @foreach (var item in Model.GroupsList)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select><br />
+                </div>
+
+            </div>
+
+            <br />
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a class="btn btn-secondary" asp-area="Staff" asp-controller="Admin" asp-action="Students">Back to list</a>
+            <hr />
+        </div>
+    </form>
+</body>
+</html>

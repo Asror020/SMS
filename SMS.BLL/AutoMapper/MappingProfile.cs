@@ -13,6 +13,8 @@ namespace SMS.BLL.AutoMapper
             CreateMap<UserDto, User>();
             CreateMap<University, UniversityDto>();
             CreateMap<UniversityDto, University>();
+            CreateMap<Student, StudentDto>();
+            CreateMap<StudentDto, Student>();
         }
     }
 }

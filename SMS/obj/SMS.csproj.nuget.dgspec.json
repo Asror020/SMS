@@ -11,7 +11,7 @@
         "projectName": "SMS.BLL",
         "projectPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS.BLL\\SMS.BLL.csproj",
         "packagesPath": "C:\\Users\\Asror\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asror\\Source\\Repos\\Asror020\\SMS\\SMS.BLL\\obj\\",
+        "outputPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asror\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,7 +107,7 @@
         "projectName": "SMS.DAL",
         "projectPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS.DAL\\SMS.DAL.csproj",
         "packagesPath": "C:\\Users\\Asror\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asror\\Source\\Repos\\Asror020\\SMS\\SMS.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMS.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asror\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -192,7 +192,7 @@
         "projectName": "SMSCore",
         "projectPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMSCore\\SMSCore.csproj",
         "packagesPath": "C:\\Users\\Asror\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asror\\Source\\Repos\\Asror020\\SMS\\SMSCore\\obj\\",
+        "outputPath": "C:\\Users\\Asror\\source\\repos\\Asror020\\SMS\\SMSCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asror\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -327,6 +327,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[6.1.8, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

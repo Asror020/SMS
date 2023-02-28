@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
+using MudBlazor.Services;
 using SMS.BLL.AutoMapper;
 using SMS.BLL.Models.Configurations;
 using SMS.BLL.Services.AuthenticationServices;
@@ -39,21 +40,30 @@ namespace SMSCore.Extensions
                 .AddScoped<IRepositoryBase<University>, RepositoryBase<University>>()
                 .AddScoped<IRepositoryBase<Email>, RepositoryBase<Email>>()
                 .AddScoped<IRepositoryBase<EmailTemplate>, RepositoryBase<EmailTemplate>>()
-                .AddScoped<IRepositoryBase<Verification>, RepositoryBase<Verification>>();
+                .AddScoped<IRepositoryBase<Verification>, RepositoryBase<Verification>>()
+                .AddScoped<IRepositoryBase<Group>, RepositoryBase<Group>>()
+                .AddScoped<IRepositoryBase<Student>, RepositoryBase<Student>>()
+                .AddScoped<IRepositoryBase<SelectionItem>, RepositoryBase<SelectionItem>>();
 
             builder.Services
                 .AddScoped<IEntityBaseService<User>, EntityBaseService<User, IRepositoryBase<User>>>()
                 .AddScoped<IEntityBaseService<University>, EntityBaseService<University, IRepositoryBase<University>>>()
                 .AddScoped<IEntityBaseService<Email>, EntityBaseService<Email, IRepositoryBase<Email>>>()
                 .AddScoped<IEntityBaseService<EmailTemplate>, EntityBaseService<EmailTemplate, IRepositoryBase<EmailTemplate>>>()
-                .AddScoped<IEntityBaseService<Verification>, EntityBaseService<Verification, IRepositoryBase<Verification>>>();
+                .AddScoped<IEntityBaseService<Verification>, EntityBaseService<Verification, IRepositoryBase<Verification>>>()
+                .AddScoped<IEntityBaseService<Group>, EntityBaseService<Group, IRepositoryBase<Group>>>()
+                .AddScoped<IEntityBaseService<Student>, EntityBaseService<Student, IRepositoryBase<Student>>>()
+                .AddScoped<IEntityBaseService<SelectionItem>, EntityBaseService<SelectionItem, IRepositoryBase<SelectionItem>>>();
 
             builder.Services
                 .AddScoped<IUserService, UserService>()
                 .AddScoped<IUniversityService, UniversityService>()
                 .AddScoped<IEmailService, EmailService>()
                 .AddScoped<IEmailTemplateService, EmailTemplateService>()
-                .AddScoped<IVerificationService, VerificationService>();
+                .AddScoped<IVerificationService, VerificationService>()
+                .AddScoped<IGroupService, GroupService>()
+                .AddScoped<IStudentService, StudentService>()
+                .AddScoped<ISelectionItemService, SelectionItemService>();
 
             return builder;
         }
@@ -94,12 +104,12 @@ namespace SMSCore.Extensions
 
             builder.Services.AddAuthentication(opt =>
             {
-                opt.DefaultAuthenticateScheme = "JWT_OR_COOKIE";
-                opt.DefaultChallengeScheme = "JWT_OR_COOKIE";
+                opt.DefaultAuthenticateScheme = "JwtAuth";
+                opt.DefaultChallengeScheme = "JwtAuth";
 
             }).AddCookie(options =>
             {
-                options.LoginPath = "/auth/signin";
+                options.LoginPath = "/authentication/auth/signin";
                 options.ExpireTimeSpan = TimeSpan.FromDays(1);
 
             }).AddJwtBearer(options =>
@@ -116,7 +126,7 @@ namespace SMSCore.Extensions
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfiguration.Key)),
                 };
 
-            }).AddPolicyScheme("JWT_OR_COOKIE", "JWT_OR_COOKIE", options =>
+            }).AddPolicyScheme("JwtAuth", "JwtAuth", options =>
             {
                 options.ForwardDefaultSelector = context =>
                 {
@@ -139,6 +149,13 @@ namespace SMSCore.Extensions
                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
                      _ => "The field is required.");
             });
+
+            return builder;
+        }
+
+        public static WebApplicationBuilder AddMudBlazor(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddMudServices();
 
             return builder;
         }

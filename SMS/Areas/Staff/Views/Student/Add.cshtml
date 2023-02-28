@@ -1,0 +1,132 @@
+﻿@model SMS.BLL.Models.ViewModels.StudentDto
+<html>
+    <style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    h1, p {
+        text-align: center;
+    }
+
+    input {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+    }
+
+    select {
+        margin: 0.25em 0em 1em 0em;
+        outline: none;
+        padding: 0.5em;
+        border: none;
+        background-color: rgb(225, 225, 225);
+        border-radius: 0.25em;
+        color: black;
+    }
+    </style>
+<body>
+
+    <form asp-area="Staff" asp-controller="Student" asp-action="Add">
+        <div class="Container">
+            <h1>Add new Student</h1>
+            <p>Please fill in these fields to add a new student.</p>
+            <hr>
+            <p class="text-danger"><strong>@TempData["Email"]</strong></p>
+            <div class="row align-items-start">
+
+                <div class="col">
+                    <label asp-for="User.FirstName"><b>First name</b></label><br />
+                    <input type="text" placeholder="Enter first name" asp-for="User.FirstName"><br />
+                    <span asp-validation-for="User.FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="User.LastName"><b>Last name</b></label><br />
+                    <input type="text" placeholder="Enter last name" asp-for="User.LastName"><br />
+                    <span asp-validation-for="User.LastName" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="User.EmailAddress"><b>Email address</b></label><br />
+                    <input type="text" placeholder="Enter email address" asp-for="User.EmailAddress"><br />
+                    <span asp-validation-for="User.EmailAddress" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row align-items-end">
+
+                <div class="col">
+                    <label asp-for="User.Password"><b>Password</b></label><br />
+                    <input type="password" placeholder="Enter password" asp-for="User.Password"><br />
+                    <span asp-validation-for="User.Password" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="CourseLevel"><b>Course Level</b></label><br />
+                    <select asp-for="CourseLevel">
+                        @foreach (var item in Model.CourseLevelsList)
+                        {
+                            <option value="@item.Value">@item.Value</option>
+                        }
+                    </select><br />
+                </div>
+
+                <div class="col">
+                    <label asp-for="Degree"><b>Degree</b></label><br />
+                    <select asp-for="Degree">
+                        @foreach (var item in Model.DegreesList)
+                        {
+                            <option value="@item.Value">@item.Value</option>
+                        }
+                    </select><br />
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <label asp-for="DateOfBirth"><b>Date of birth</b></label><br />
+                    <input type="date" placeholder="Enter date of birth" asp-for="DateOfBirth"><br />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="StudentId"><b>Student Id</b></label><br />
+                    <input type="text" placeholder="Enter student id" asp-for="StudentId"><br />
+                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                </div>
+
+                <div class="col">
+                    <label asp-for="GroupName"><b>Group Name</b></label><br />
+                    <select asp-for="GroupName">
+                        <option value="@null">No group</option>
+                        @foreach(var item in Model.GroupsList)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select><br /> 
+                </div>
+
+            </div>
+            
+            <div class="row align-items-center">
+            </div>
+
+            <br />
+            <button type="submit" class="btn btn-primary">Add</button>
+            <a class="btn btn-secondary" asp-area="Staff" asp-controller="Admin" asp-action="Students">Back to list</a>
+            <hr />
+        </div>
+    </form>
+</body>
+</html>
+
+

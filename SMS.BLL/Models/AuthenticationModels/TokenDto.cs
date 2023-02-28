@@ -14,5 +14,7 @@ namespace SMS.BLL.Models.AuthenticationModels
         public string RefreshToken { get; set; } = null!;
 
         public ClaimsPrincipal Principal { get; set; } = null!;
+
+        public string Role { get; set; } = null!;
     }
 }
